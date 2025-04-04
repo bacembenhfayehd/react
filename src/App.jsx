@@ -1,4 +1,28 @@
-import { useState } from "react";
+import React from 'react'
+import Home from './Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Contact from './components/Contact'
+import Login from './components/Login'
+
+function App() {
+  return (
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path ='/contact' element={<Contact/>}/>
+        <Route path='/login' element={<Login/>}/>
+      </Routes>
+      </BrowserRouter>
+      
+      </div>
+  )
+}
+
+export default App
+
+
+/*import { useState } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 
