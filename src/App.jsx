@@ -1,4 +1,30 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
+
+function App() {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
+
+  const deleteTask = (indice) => {
+    setTasks(tasks.filter((_, i) => i !== indice));
+  };
+
+  return (
+    <div>
+      <h2>Task manager</h2>
+      <TaskInput addTask={addTask} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
+    </div>
+  );
+}
+
+export default App;
+
+/*import React, { useState } from "react";
 import one from "./images/avatar12.jpg";
 import two from "./images/avatar13.jpg";
 import three from "./images/avatar15.jpg";
@@ -64,3 +90,4 @@ function App() {
 }
 
 export default App;
+*/
