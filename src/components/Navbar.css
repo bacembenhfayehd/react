@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    background: blue;
+    color: white;
+    padding: 50px 0;
+}
+
+.liste{
+    display: flex;
+    gap: 20px;
+}
